@@ -6,11 +6,4 @@ Libero: Valore JS: parcheggio[i] = 0
 Libero: DOM: ( Cannot decode )
 Occupato: Valore JS: parcheggio[i] = 1
 Occupato: DOM: ( Cannot decode )
-
-
-
-
-
-
-
 @enduml
