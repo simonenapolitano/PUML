@@ -1,0 +1,34 @@
+@startuml
+
+class Parcheggio{
+    -capienzaMassima: Integer
+    -posti: Array
+    --
+    +aggiornaSchermo(): void
+    +entraAuto(): void
+    +esceAuto(): void
+}
+
+class PostoAuto{
+    -numero: Integer
+    -stato: Integer
+    -immagine: String
+    --
+    +getStato(): Integer
+    +getImmagine(): String
+}
+
+Parcheggio "1" *-- "1..*" PostoAuto : contiene >  
+
+note right of PostoAuto::stato
+    0 = libero
+    1 = occupato
+end note
+
+note right of PostoAuto::immagine
+    "spunta_verde.png"
+    "x_rossa.png"
+end note
+
+
+@enduml
