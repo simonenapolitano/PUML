@@ -1,0 +1,27 @@
+@startuml
+start
+:Utente clicca "Fai entrare un'auto";
+:postoTrovato = false;
+
+while (Per ogni elemento "i" nell'array parcheggio)
+    if(parcheggio[i] == 0?) then (Sì, posto libero)
+        :parcheggio[i] = 1 (Diventa occupato);
+        :postoTrovato = true;
+        :alert("Auto parcheggiata al posto" + (i+1));
+        break
+    else(No, già occupato)
+        :Passa al prossimo 'i';
+    endif
+endwhile
+if(postoTrovato == false) then (Sì, nessun posto a 0)
+    :alert("Attenzione: Parcheggio Pieno!");
+
+else(No, auto entrata)
+    
+
+endif
+:Chiama funzione aggiornaSchermo();
+note right: Qui il DOM viene aggiornato inserendo le\n ( Cannot decode ) nei posti a 1
+stop
+
+@enduml
